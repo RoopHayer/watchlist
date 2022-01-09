@@ -1,0 +1,1 @@
+### One-stop shop to keep track of all the content available on digital platforms or cable networks. User can add/update/delete movies and tv shows on the watchlist. Share their watchlist with friends and family
