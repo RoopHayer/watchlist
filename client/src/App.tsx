@@ -6,13 +6,13 @@ import Results from './components/results/Results';
 import Footer from './components/footer/Footer';
 
 function App() {
+
   return (
     <div className="App">
       <Header/>
       <Home/>
       <Form/>
       <Results/>
-      <SingleResult/>
       <Footer/>
     </div>
   );
