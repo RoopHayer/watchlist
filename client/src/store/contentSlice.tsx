@@ -7,8 +7,8 @@ const MOVIE_URL = 'https://www.omdbapi.com';
 const API_KEY = '5e962003';
 
 
-export const fetchContent = createAsyncThunk('content/fetchContent', async () =>{
-  const contentText = 'naruto' 
+export const fetchContent = createAsyncThunk('content/fetchContent', async (searchText:string) =>{
+  let contentText = searchText; 
   const response = await axios.get(`${MOVIE_URL}/?s=${contentText}&apikey=${API_KEY}`)
   return response.data;
 })

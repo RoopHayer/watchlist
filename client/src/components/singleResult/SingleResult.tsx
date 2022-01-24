@@ -1,16 +1,17 @@
-
+import {Card} from "react-bootstrap";
 export default function SingleResult(props: any) {
   const singleContent = props.content;
   return (
     <>
-    <div style ={{display:"flex", height:'30rem', width:'20rem',flexDirection:'column', alignContent:'center'}}>
-      {singleContent.Title}
-    <img src={singleContent.Poster}/>
-    <div>{singleContent.Year}</div>
-    <div>{singleContent.Type}</div>
-    </div>
-    
-    
+  <Card style={{margin:"1rem"}}>
+    <Card.Img variant="top" src={singleContent.Poster} style={{width:'100%',height:'100%'}} />
+    <Card.Body>
+      <Card.Text>{singleContent.Title}</Card.Text>
+      <Card.Text>
+      {singleContent.Year}
+      </Card.Text>
+    </Card.Body>
+  </Card> 
     </>
   )
 }
