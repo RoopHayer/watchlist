@@ -1,39 +1,85 @@
 import React from "react";
 import SingleResult from "../singleResult/SingleResult";
 import { fetchContent } from "../../store/contentSlice";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { CardGroup, Row, Carousel } from "react-bootstrap";
 import "./results.css";
 import { getAllContent } from "../../store/contentSlice";
-export default function Results() {
-  // const dispatch = useDispatch();
-  // useEffect(()=>{
-  //   dispatch(fetchContent('james bond'));
-  //   console.log('hello')
-  // },[dispatch])
+import Slider from "react-slick";
 
-  console.log(getAllContent);
+export default function Results() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 4,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   const contentListings = useSelector(getAllContent);
-
-  console.log(contentListings.Response);
   return (
-    <Row>
-      <Carousel className="slide w-100">
-        <CardGroup style={{ overflow: "auto", scrollbarColor: "red" }}>
-          {/* <Row xs={1} sm={2} md={2} lg={3}> */}
-
-          {contentListings.Response &&
-            contentListings.Search?.map((item: any, idx: number) => (
-              <Carousel.Item>
-                <SingleResult content={item} key={idx} />
-              </Carousel.Item>
+    <>
+      <div
+        style={{
+          width: "100%",
+          marginTop: ".8rem",
+        }}
+      >
+        <Slider {...settings}>
+          {contentListings.content.Response &&
+            contentListings.content.Search?.map((item: any, idx: number) => (
+              <SingleResult content={item} key={idx} />
             ))}
-          {/* </Row> */}
-        </CardGroup>
-      </Carousel>
-    </Row>
+        </Slider>
+      </div>
+    </>
   );
 }
