@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 export default function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" style={{ width: "100%" }}>
         <Container>
           <Navbar.Brand href="#home">Watchlist</Navbar.Brand>
           <Nav className="me-auto">
