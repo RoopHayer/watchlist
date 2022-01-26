@@ -1,12 +1,24 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // export const fetchContent = createAsyncThunk('content/fetchContent', async (searchText:string) =>{
 //   let contentText = searchText;
 //   const response = await axios.get(`${MOVIE_URL}/?s=${contentText}&apikey=${API_KEY}`)
 //   return response.data;
 // })
-
-const initialState = {
+interface saveContentState {
+  // title: string;
+  // year: string;
+  // imdbID: string;
+  // type: string;
+  // poster: string;
+  saveContent: {}[];
+}
+const initialState: saveContentState = {
+  // title: "",
+  // year: "",
+  // imdbID: "",
+  // type: "",
+  // poster: "",
   saveContent: [],
 };
 
@@ -14,11 +26,15 @@ const saveContentSlice = createSlice({
   name: "saveContent",
   initialState,
   reducers: {
-    saveContentToProfile: (state, { payload }) => {
-      let copyState = { ...state };
-      console.log(state.saveContent);
-      // copyState.saveContent = [...state.saveContent, payload];
-      return payload;
+    saveContentToProfile: (state, action: PayloadAction<saveContentState>) => {
+      // let body = {
+      //   title: action.payload.title,
+      //   year: action.payload.year,
+      //   imdbID: action.payload.imdbID,
+      //   type: action.payload.type,
+      //   poster: action.payload.poster,
+      // };
+      state.saveContent.push(action.payload);
     },
   },
   // extraReducers: builder=>{
