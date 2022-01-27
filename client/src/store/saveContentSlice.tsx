@@ -52,5 +52,5 @@ const saveContentSlice = createSlice({
 });
 
 export const { saveContentToProfile } = saveContentSlice.actions;
-export const saveContent = (state: any) => state.content;
+export const saveContent = (state: any) => state.saveContent;
 export default saveContentSlice.reducer;
