@@ -1,6 +1,4 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Profile from "../profile/profile";
 export default function Header() {
   return (
     <>
