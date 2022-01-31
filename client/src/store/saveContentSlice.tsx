@@ -1,10 +1,4 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-// export const fetchContent = createAsyncThunk('content/fetchContent', async (searchText:string) =>{
-//   let contentText = searchText;
-//   const response = await axios.get(`${MOVIE_URL}/?s=${contentText}&apikey=${API_KEY}`)
-//   return response.data;
-// })
 interface saveContentState {
   // title: string;
   // year: string;
@@ -37,18 +31,6 @@ const saveContentSlice = createSlice({
       state.saveContent.push(action.payload);
     },
   },
-  // extraReducers: builder=>{
-  //   builder.addCase(fetchContent.pending,()=>{
-  //     console.log('Pending');
-  //   })
-  //   .addCase(fetchContent.fulfilled,(state,{payload})=>{
-  //     console.log('Successfull');
-  //     return{...state,content: payload}
-  //   })
-  //   .addCase(fetchContent.rejected,()=>{
-  //     console.log('Rejected')
-  //   })
-  // }
 });
 
 export const { saveContentToProfile } = saveContentSlice.actions;
