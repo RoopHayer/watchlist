@@ -1,12 +1,7 @@
 import { Card } from "react-bootstrap";
-// import { useDispatch } from "react-redux";
-// import { saveContentToProfile } from "../../store/saveContentSlice";
 export default function ProfileSingleContent(props: any) {
   const singleContent: any = props.content;
-  // const dispatch = useDispatch();
-  // const handleClick = (e: any) => {
-  //   dispatch(saveContentToProfile(singleContent));
-  // };
+
   return (
     <>
       <Card className="content-card">
