@@ -1,9 +1,5 @@
-import React from "react";
 import SingleResult from "../singleResult/SingleResult";
-import { fetchContent } from "../../store/contentSlice";
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { CardGroup, Row, Carousel } from "react-bootstrap";
 import "./results.css";
 import { getAllContent } from "../../store/contentSlice";
 import Slider from "react-slick";

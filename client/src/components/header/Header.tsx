@@ -8,7 +8,11 @@ export default function Header() {
       <Navbar
         bg="dark"
         variant="dark"
-        style={{ width: "100%", paddingLeft: " 10rem", paddingRight: " 10rem" }}
+        style={{
+          width: "100%",
+          paddingLeft: " 10rem",
+          paddingRight: " 10rem",
+        }}
       >
         <Navbar.Brand href="#home">Watchlist</Navbar.Brand>
         <Nav className="me-auto">
