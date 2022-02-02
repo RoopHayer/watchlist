@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ContentForm from "./components/contentForm/ContentForm";
+import Footer from "./components/footer/Footer";
 import Profile from "./components/profile/profile";
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

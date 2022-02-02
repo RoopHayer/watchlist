@@ -14,6 +14,7 @@ export default function ContentForm() {
   return (
     <>
       <Form
+        className="content-form"
         style={{
           border: "solid .2rem darkgrey",
           padding: "1rem",
@@ -24,7 +25,7 @@ export default function ContentForm() {
         <Row className="mb-3">
           <Form.Group as={Col} className="mb-3" controlId="content">
             <Form.Label>Title</Form.Label>
-            <Form.Control type="text" placeholder="Enter Movies/TV Shows" />
+            <Form.Control type="text" placeholder="keyword" />
           </Form.Group>
           <Form.Group as={Col} className="mb-3" controlId="year">
             <Form.Label>Year</Form.Label>

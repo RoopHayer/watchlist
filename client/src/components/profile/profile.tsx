@@ -12,13 +12,13 @@ export default function Profile() {
     <>
       <CardGroup style={{ margin: "0 10rem" }}>
         <Container fluid>
-          <Row xs={1} sm={2} md={4} lg={4}>
-            {/* <Col xs={1} sm={2} md={4} lg={4}> */}
+          <Row xs={1} sm={2} md={3} lg={4}>
             {saveContentListings &&
               saveContentListings.saveContent?.map((item: any, idx: number) => (
-                <ProfileSingleContent content={item} key={idx} />
+                <Col>
+                  <ProfileSingleContent content={item} key={idx} />
+                </Col>
               ))}
-            {/* </Col> */}
           </Row>
         </Container>
       </CardGroup>
