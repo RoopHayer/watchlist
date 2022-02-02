@@ -23,7 +23,7 @@ export default function ContentForm() {
       >
         <Row className="mb-3">
           <Form.Group as={Col} className="mb-3" controlId="content">
-            <Form.Label>Find TV Shows/ Movies</Form.Label>
+            <Form.Label>Title</Form.Label>
             <Form.Control type="text" placeholder="Enter Movies/TV Shows" />
           </Form.Group>
           <Form.Group as={Col} className="mb-3" controlId="year">
@@ -35,7 +35,7 @@ export default function ContentForm() {
             <Form.Control type="text" placeholder="Language" />
           </Form.Group>
           <Form.Group as={Col} className="mb-3" controlId="type">
-            <Form.Label>Movie/TV show</Form.Label>
+            <Form.Label>Type</Form.Label>
             <Form.Control type="text" placeholder="Movie/TV Show" />
           </Form.Group>
         </Row>

@@ -63,19 +63,12 @@ export default function Results() {
   const contentListings = useSelector(getAllContent);
   return (
     <>
-      <div
-        style={{
-          width: "100%",
-          marginTop: ".8rem",
-        }}
-      >
-        <Slider {...settings}>
-          {contentListings.content.Response &&
-            contentListings.content.Search?.map((item: any, idx: number) => (
-              <SingleResult content={item} key={idx} />
-            ))}
-        </Slider>
-      </div>
+      <Slider {...settings}>
+        {contentListings.content.Response &&
+          contentListings.content.Search?.map((item: any, idx: number) => (
+            <SingleResult content={item} key={idx} />
+          ))}
+      </Slider>
     </>
   );
 }
