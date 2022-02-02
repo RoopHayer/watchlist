@@ -1,8 +1,24 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { useState } from "react";
+import { Navbar, Nav, Button, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { fetchContent } from "../../store/contentSlice";
+import { showHideSearch } from "../../store/showSearchSlice";
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const [value, setValue] = useState("");
+  const handleShow = () => {
+    dispatch(showHideSearch());
+  };
+  const handleSearch = (e: any) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const searchText = value;
+      dispatch(fetchContent(searchText));
+    }
+  };
   return (
     <>
       <Navbar
@@ -25,8 +41,15 @@ export default function Header() {
         </Nav>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
+          <Button onClick={handleShow}>+ Advanced Search</Button>
           <Form style={{ marginRight: "2rem" }}>
-            <Form.Control type="text" placeholder="Enter Movies/TV Shows" />
+            <Form.Control
+              type="text"
+              value={value}
+              onKeyPress={handleSearch}
+              onChange={(e) => setValue(e.target.value)}
+              placeholder="Enter Movies/TV Shows"
+            />
           </Form>
           <Navbar.Text>
             Signed in as: <a href="#login">Roop Hayer</a>
