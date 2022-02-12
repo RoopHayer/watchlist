@@ -16,7 +16,6 @@ export default function ContentForm() {
       <Form
         className="content-form"
         style={{
-          border: "solid .2rem darkgrey",
           padding: "1rem",
           boxShadow: "0  0 .1rem .1rem grey",
         }}
@@ -37,7 +36,7 @@ export default function ContentForm() {
           </Form.Group>
           <Form.Group as={Col} className="mb-3" controlId="type">
             <Form.Label>Type</Form.Label>
-            <Form.Control type="text" placeholder="Movie/TV Show" />
+            <Form.Control type="text" placeholder="movies/series/episode" />
           </Form.Group>
         </Row>
 

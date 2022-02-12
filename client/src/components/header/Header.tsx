@@ -41,7 +41,17 @@ export default function Header() {
         </Nav>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Button onClick={handleShow}>+ Advanced Search</Button>
+          <Button
+            style={{
+              backgroundColor: "#f0da5a",
+              color: "black",
+              border: "none",
+              margin: "0 .5rem",
+            }}
+            onClick={handleShow}
+          >
+            + Advanced Search
+          </Button>
           <Form style={{ marginRight: "2rem" }}>
             <Form.Control
               type="text"
@@ -56,7 +66,6 @@ export default function Header() {
           </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>
-      <br />
     </>
   );
 }
