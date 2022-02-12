@@ -1,6 +1,5 @@
 import ContentForm from "../contentForm/ContentForm";
 import Results from "../results/Results";
-import Footer from "../footer/Footer";
 import "./home.css";
 import { useSelector } from "react-redux";
 import { showSearch } from "../../store/showSearchSlice";

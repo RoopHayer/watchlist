@@ -5,7 +5,6 @@ import { Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchContent } from "../../store/contentSlice";
 import { showHideSearch } from "../../store/showSearchSlice";
-import Results from "../results/Results";
 
 export default function Header() {
   const dispatch = useDispatch();
