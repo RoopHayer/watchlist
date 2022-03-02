@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Nav, Button, Badge } from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
